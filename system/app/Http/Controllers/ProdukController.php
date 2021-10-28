@@ -68,7 +68,7 @@ class ProdukController extends Controller {
 		// $data['list_produk'] = Produk::whereMonth('created_at', '10')->whereYear('created_at', '2021')->get();
 		// $data['list_produk'] = Produk::whereTime('created_at', '11:11:14')->get();
 		// $data['list_produk'] = Produk::whereBetween('harga', [$harga_min, $harga_max])->whereYear('created_at', '2021')->get();
-		 $data['list_produk'] = Produk::whereBetween('harga', [$harga_min, $harga_max])->whereNotIn('stok', [2])->whereYear('created_at', '2021')->get();
+		$data['list_produk'] = Produk::whereBetween('harga', [$harga_min, $harga_max])->whereNotIn('stok', [2])->whereYear('created_at', '2021')->get();
 
 		$data['nama'] = $nama;
 		$data['stok'] = request('stok');
